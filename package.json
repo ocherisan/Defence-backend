@@ -1,0 +1,30 @@
+{
+  "name": "defence-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocherisan/Defence-backend.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Vologzhanina Nataly <vologzhanina.nataly@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ocherisan/Defence-backend/issues"
+  },
+  "homepage": "https://github.com/ocherisan/Defence-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "nodemon": "^2.0.15"
+  }
+}
