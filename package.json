@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ocherisan/Defence-backend#readme",
   "dependencies": {
+    "config": "^3.3.6",
     "express": "^4.17.1",
     "mongoose": "^6.0.13"
   },
