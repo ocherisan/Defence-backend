@@ -1,5 +1,5 @@
 {
     "port": 5000,
-    "mongoUri": "mongodb://admin:131281@127.0.0.1:27017/?authSource=users",
+    "mongoUri": "mongodb://admin:131281@127.0.0.1:27017/users?authSource=users",
     "jwtSecret":"meowwork"
 }
