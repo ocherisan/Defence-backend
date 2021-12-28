@@ -6,7 +6,6 @@ const jwt = require("jsonwebtoken");
 const config = require("../config/default.json");
 
 const router = Router();
-
 //TODO: переделать с помощью passport.js
 // /api/auth/register
 router.post(
@@ -43,6 +42,7 @@ router.post(
 
       res.status(201).json({ message: "User is created" });
     } catch (error) {
+      console.log(error.message);
       res.status(500).json({ message: "Something went wrong. Try again" });
     }
   }
