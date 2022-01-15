@@ -5,6 +5,7 @@ const { check, validationResult } = require("express-validator");
 const jwt = require("jsonwebtoken");
 const config = require("../config/default.json");
 
+// Не забудь запустить сервер базы данных с помощью команды "mongod --dbpath "C:\Users\Наталья\Documents\Диплом\DataBase""
 const router = Router();
 //TODO: переделать с помощью passport.js
 // /api/auth/register
@@ -42,7 +43,7 @@ router.post(
 
       res.status(201).json({ message: "User is created" });
     } catch (error) {
-      console.log(error.message);
+      console.error(error.message);
       res.status(500).json({ message: "Something went wrong. Try again" });
     }
   }
@@ -61,7 +62,7 @@ router.post(
       if (!errors.isEmpty()) {
         return res.status(400).json({
           errors: errors.array(),
-          message: "Incorrect data during registration",
+          message: "Incorrect data",
         });
       }
 
@@ -83,7 +84,7 @@ router.post(
         {
           userId: user.id,
         },
-        config.get("jwtSecret"),
+        config["jwtSecret"],
         {
           expiresIn: "1h",
         }
@@ -91,6 +92,7 @@ router.post(
 
       res.json({ token, userId: user.id });
     } catch (error) {
+      console.error(error.message);
       res.status(500).json({ message: "Something went wrong. Try again" });
     }
   }
